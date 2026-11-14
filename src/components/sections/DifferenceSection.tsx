@@ -23,7 +23,7 @@ export function DifferenceSection() {
   return (
     <section
       id="about"
-      className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--hair-soft)] relative scroll-mt-12"
+      className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--hair-soft)] relative scroll-mt-12 overflow-hidden"
     >
       {/* Background cyan subtle glow */}
       <div
