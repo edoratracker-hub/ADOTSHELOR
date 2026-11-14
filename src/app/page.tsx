@@ -44,7 +44,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#060D17] text-white">
+    <div className="min-h-screen flex flex-col bg-[#060D17] text-white overflow-x-clip">
       {/* Brand Intro Animation */}
       <BrandIntro
         key={introKey}
