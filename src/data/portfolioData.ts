@@ -14,7 +14,6 @@ export const NAVIGATION_ITEMS: readonly NavItem[] = [
   { label: "Our Approach", href: "#approach" },
   { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export const BRAND_INFO = {
@@ -32,7 +31,8 @@ export const BRAND_INFO = {
 export const HERO_HIGHLIGHTS = [
   {
     title: "Practical Solutions",
-    description: "Designed for real-world reliability and day-to-day simplicity.",
+    description:
+      "Designed for real-world reliability and day-to-day simplicity.",
   },
   {
     title: "Transparent Process",
@@ -227,8 +227,7 @@ export const DIFFERENCE_ITEMS: readonly DifferenceItem[] = [
   },
   {
     title: "Practical Development",
-    description:
-      "We focus on functionality, usability, and maintainable code.",
+    description: "We focus on functionality, usability, and maintainable code.",
     icon: "Cpu",
   },
   {
@@ -242,15 +241,32 @@ export const DIFFERENCE_ITEMS: readonly DifferenceItem[] = [
 export const CONTACT_CHANNELS: readonly ContactChannel[] = [
   {
     label: "Official Email",
-    value: "contact@adotshelor.com",
-    href: "mailto:contact@adotshelor.com",
+    value: "adotshelor@gmail.com",
+    href: "mailto:adotshelor@gmail.com",
   },
 ];
 
+export const WHATSAPP_CONTACT = {
+  phoneNumber: "918138953814",
+  prefilledMessage: "Hi, I'd like to know more about AdotShelor's services.",
+} as const;
+
 export const SOCIAL_LINKS: readonly SocialLink[] = [
-  { platform: "GitHub", url: "https://github.com/adotshelor", isConfigured: true },
-  { platform: "LinkedIn", url: "https://linkedin.com/company/adotshelor", isConfigured: true },
-  { platform: "X / Twitter", url: "https://x.com/adotshelor", isConfigured: true },
+  {
+    platform: "GitHub",
+    url: "https://github.com/adotshelor-cloud",
+    isConfigured: true,
+  },
+  {
+    platform: "LinkedIn",
+    url: "https://linkedin.com/company/adotshelor",
+    isConfigured: true,
+  },
+  {
+    platform: "X / Twitter",
+    url: "https://x.com/adotshelor",
+    isConfigured: true,
+  },
 ];
 
 export const FOOTER_SERVICES = [
@@ -265,5 +281,4 @@ export const FOOTER_NAV = [
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Our Approach", href: "/approach" },
-  { label: "Contact", href: "/contact" },
 ];

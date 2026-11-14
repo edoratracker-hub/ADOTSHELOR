@@ -1,12 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import {
-  ArrowUpRightIcon,
-  FileText,
-  Shield,
-  X,
-} from "lucide-react";
+import { ArrowUpRightIcon, FileText, Shield, X } from "lucide-react";
 
 import { TextHoverEffect } from "@/components/effects/text-hover-effect";
 import {
@@ -40,10 +35,10 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
   const year = useSyncExternalStore(
     subscribeEmpty,
     getClientYear,
-    getServerYear
+    getServerYear,
   );
   const [legalModal, setLegalModal] = useState<"privacy" | "terms" | null>(
-    null
+    null,
   );
   const email = CONTACT_CHANNELS[0];
 
@@ -125,7 +120,9 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
 
         <div className="mt-12 flex flex-col-reverse gap-6 border-t border-[var(--hair)] pt-6 text-sm text-white/60 sm:mt-14 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <p>© {year} {BRAND_INFO.name}. All rights reserved.</p>
+            <p>
+              © {year} {BRAND_INFO.name}. All rights reserved.
+            </p>
             <button
               type="button"
               onClick={() => setLegalModal("privacy")}
@@ -216,10 +213,10 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
                     sell, rent, or trade your personal data.
                   </p>
                   <p>
-                    <strong>Information We Collect:</strong> When you submit
-                    our contact form, we only receive the information you
-                    provide (name, email, service interests, and message)
-                    strictly to respond to your inquiry.
+                    <strong>Information We Collect:</strong> When you submit our
+                    contact form, we only receive the information you provide
+                    (name, email, service interests, and message) strictly to
+                    respond to your inquiry.
                   </p>
                   <p>
                     <strong>Confidentiality:</strong> Every project inquiry and
@@ -228,7 +225,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
                   </p>
                   <p>
                     <strong>Contact:</strong> For privacy inquiries, please
-                    email contact@adotshelor.com.
+                    email adotshelor@gmail.com
                   </p>
                 </div>
               </div>
@@ -250,14 +247,14 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
                     terms.
                   </p>
                   <p>
-                    <strong>Studio Services:</strong> AdotShelor provides
-                    custom software engineering, product development, and
-                    guided technical advisory under mutual client agreements.
+                    <strong>Studio Services:</strong> AdotShelor provides custom
+                    software engineering, product development, and guided
+                    technical advisory under mutual client agreements.
                   </p>
                   <p>
                     <strong>Intellectual Property:</strong> Clients retain
-                    complete ownership of custom code and deliverables
-                    specified in their respective project contracts.
+                    complete ownership of custom code and deliverables specified
+                    in their respective project contracts.
                   </p>
                   <p>
                     <strong>Contact:</strong> For any contractual questions,

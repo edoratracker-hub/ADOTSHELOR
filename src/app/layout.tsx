@@ -42,7 +42,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#060D17] text-white selection:bg-[#00D2EE]/30 selection:text-[#38BDF8]">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-[#060D17] text-white selection:bg-[#00D2EE]/30 selection:text-[#38BDF8]"
+      >
         <a className="skip-link" href="#main">
           Skip to content
         </a>
