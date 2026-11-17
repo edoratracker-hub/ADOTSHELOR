@@ -121,14 +121,14 @@ export function ResizableNavbar({
         animate={{ maxWidth: compact ? compactWidth : maxWidth, y: compact ? 12 : 0 }}
         transition={spring}
         className={cn(
-          "relative mx-auto flex h-14 items-center gap-4 rounded-full border px-4 transition-[background-color,border-color,box-shadow] duration-300 motion-reduce:transition-none",
+          "relative mx-auto flex h-14 w-full items-center gap-4 rounded-full border px-4 transition-[background-color,border-color,box-shadow] duration-300 motion-reduce:transition-none",
           compact || menuOpen
             ? "border-border bg-background/75 shadow-lg shadow-foreground/5 backdrop-blur-md"
             : "border-transparent"
         )}
       >
         <div className="flex shrink-0 items-center">{logo}</div>
-        <div className="hidden flex-1 justify-center @3xl/navbar:flex">
+        <div className="hidden min-w-0 flex-1 justify-center @3xl/navbar:flex">
           <div
             onMouseLeave={hide}
             onBlur={(event) => {

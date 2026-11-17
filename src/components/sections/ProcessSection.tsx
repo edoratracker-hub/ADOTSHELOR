@@ -1,14 +1,16 @@
+import { MessageCircle } from "lucide-react";
 import { StickyScroll } from "@/components/effects/sticky-scroll";
-import { WORK_STAGES } from "@/data/portfolioData";
+import ScrollFloat from "@/components/ScrollFloat";
+import { WHATSAPP_HREF, WORK_STAGES } from "@/data/portfolioData";
 
 const items = WORK_STAGES.map((stage) => ({
   title: `${stage.step}. ${stage.title}`,
   description: stage.description,
   content: (
-    <div className="relative flex size-full flex-col justify-between overflow-hidden rounded-xl border border-[var(--hair)] bg-[#0b192c]/90 p-6 sm:p-8">
-      <div className="flex items-center justify-between gap-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/50 sm:text-xs">
-        <span>AdotShelor / Process</span>
-        <span className="rounded-full border border-[var(--hair)] px-3 py-1 text-[#00d2ee]">
+    <div className="relative flex size-full flex-col justify-between overflow-hidden rounded-xl border border-[var(--hair)] bg-[#151D31]/90 p-6 sm:p-8">
+      <div className="flex items-center justify-between gap-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F4F6FB]/50 sm:text-xs">
+        <span>ADOT SHEL OR / Our Approach</span>
+        <span className="rounded-full border border-[var(--hair)] px-3 py-1 text-[#9FB3FF]">
           {stage.timeline}
         </span>
       </div>
@@ -16,18 +18,18 @@ const items = WORK_STAGES.map((stage) => ({
       <div>
         <span
           aria-hidden="true"
-          className="block font-display text-[clamp(7rem,15vw,12rem)] leading-[0.8] font-semibold tracking-[-0.09em] text-white/[0.08]"
+          className="block font-display text-[clamp(7rem,15vw,12rem)] leading-[0.8] font-semibold tracking-[-0.09em] text-[#F4F6FB]/[0.08]"
         >
           {stage.step}
         </span>
-        <div className="mt-7 h-px w-full bg-gradient-to-r from-[#0284c7] via-[#00d2ee] to-transparent" />
+        <div className="mt-7 h-px w-full bg-gradient-to-r from-[#9FB3FF] via-[#9FB3FF] to-transparent" />
       </div>
 
       <div>
-        <p className="text-sm font-medium text-[#00d2ee]">
+        <p className="text-sm font-medium text-[#9FB3FF]">
           Stage {stage.step}
         </p>
-        <p className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        <p className="mt-2 text-2xl font-semibold tracking-tight text-[#F4F6FB] sm:text-3xl">
           {stage.title}
         </p>
       </div>
@@ -43,20 +45,45 @@ export function ProcessSection() {
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-3xl sm:mb-16">
-          <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[rgba(0,210,238,0.28)] bg-[rgba(0,210,238,0.12)] px-3 py-1 text-xs font-semibold text-[#00d2ee]">
-            Our Development Process
+          <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[rgba(63, 99, 230, 0.28)] bg-[rgba(63, 99, 230, 0.12)] px-3 py-1 text-xs font-semibold text-[#9FB3FF]">
+            A clear way to get started
           </span>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            A Clear Path from Idea to Impact.
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
-            How we work: four deliberate stages designed to ensure complete
-            technical clarity, continuous collaboration, and reliable
-            execution.
+          <ScrollFloat containerClassName="text-3xl font-extrabold tracking-tight text-[#F4F6FB] sm:text-4xl lg:text-5xl">
+            Build in steps. Stay{" "}
+            <em className="font-[var(--font-italic)] font-normal text-[#9FB3FF]">
+              involved.
+            </em>
+          </ScrollFloat>
+          <p className="mt-4 text-base leading-relaxed text-[#F4F6FB]/70 sm:text-lg">
+            We follow Discover, Plan, Build, Review, Improve, then Launch and
+            Support. You see progress, share feedback, and set priorities as
+            we go.
           </p>
         </div>
 
         <StickyScroll items={items} className="gap-8 lg:gap-16" />
+
+        <div className="mt-8 max-w-3xl space-y-3 text-sm leading-relaxed text-[#F4F6FB]/70">
+          <p>
+            For your IT team: Each cycle follows a prioritised backlog (ordered
+            task list) and produces a working increment (usable update). We
+            review feedback and maintain version control and documentation.
+          </p>
+          <p>
+            Cost depends on pages, online payments, admin features, and ongoing
+            support. After we understand your needs, we share a clear quote and
+            agree on a timeline before work starts.
+          </p>
+          <a
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold text-[#9FB3FF] transition-colors hover:text-[#F4F6FB]"
+          >
+            <MessageCircle aria-hidden="true" className="size-4" />
+            Chat on WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   );

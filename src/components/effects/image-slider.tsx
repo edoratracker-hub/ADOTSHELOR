@@ -42,7 +42,7 @@ interface ImageSliderProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const button =
-  "pointer-events-auto grid size-9 place-items-center rounded-full bg-black/35 text-white backdrop-blur-sm hover:bg-black/55 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+  "pointer-events-auto grid size-9 place-items-center rounded-full bg-black/35 text-[#F4F6FB] backdrop-blur-sm hover:bg-black/55 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
 
 /**
  * Full-bleed crossfading image slider with autoplay, dots, arrows, arrow
@@ -123,7 +123,7 @@ export function ImageSlider({
       aria-roledescription="carousel"
       aria-label={label}
       data-slot="image-slider"
-      className={cn("relative isolate h-96 w-full touch-pan-y overflow-hidden bg-muted text-white", className)}
+      className={cn("relative isolate h-96 w-full touch-pan-y overflow-hidden bg-muted text-[#F4F6FB]", className)}
     >
       {/* display: contents — leaves the consumer's handlers on <section> alone */}
       <div

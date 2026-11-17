@@ -16,7 +16,6 @@ export interface ServicePillar {
   readonly whatWeOffer: readonly string[];
   readonly buttonText: string;
   readonly buttonHref: string;
-  readonly technicalFocus: readonly string[];
 }
 
 export interface WorkStage {
@@ -29,17 +28,10 @@ export interface WorkStage {
 export interface ProjectItem {
   readonly id: string;
   readonly name: string;
-  readonly title?: string;
   readonly category: string;
-  readonly problem: string;
-  readonly solution: string;
-  readonly technologies: readonly string[];
-  readonly status: "Active" | "In Development" | "Prototype" | "In Production";
-  readonly screenshot?: string;
-  readonly liveDemo?: string;
-  readonly githubRepo?: string;
-  readonly metrics?: string;
-  readonly isPrototype?: boolean;
+  readonly description: string;
+  readonly features?: readonly string[];
+  readonly status: "In Development";
 }
 
 export interface DifferenceItem {

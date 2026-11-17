@@ -2,9 +2,9 @@ import React from "react";
 
 export const NavyLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 28 28" fill="none" aria-hidden="true" {...props}>
-    <path d="M14 1.6 20.3 8 14 14.4 7.7 8 14 1.6Z" fill="#00D2EE" />
-    <path d="M6.4 9.3 12.7 15.7 6.4 22.1 0.1 15.7 6.4 9.3Z" fill="#0284C7" />
-    <path d="M21.6 9.3 27.9 15.7 21.6 22.1 15.3 15.7 21.6 9.3Z" fill="#38BDF8" />
+    <path d="M14 1.6 20.3 8 14 14.4 7.7 8 14 1.6Z" fill="#9FB3FF" />
+    <path d="M6.4 9.3 12.7 15.7 6.4 22.1 0.1 15.7 6.4 9.3Z" fill="#9FB3FF" />
+    <path d="M21.6 9.3 27.9 15.7 21.6 22.1 15.3 15.7 21.6 9.3Z" fill="#F4F6FB" />
   </svg>
 );
 

@@ -2,33 +2,33 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#060D17",
+  themeColor: "#0B1020",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "AdotShelor — Technology Crafted for Purpose",
+  title: "ADOT SHEL OR — Take Your Business Online",
   description:
-    "We turn problems into solutions, ideas into products, and projects into practical understanding. An independent technology and product development studio.",
+    "Custom software, business identity, and ongoing IT support for start-ups moving from offline to online.",
   metadataBase: new URL("https://adotshelor.com"),
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "AdotShelor — Technology Crafted for Purpose",
+    title: "ADOT SHEL OR — Take Your Business Online",
     description:
-      "We turn problems into solutions, ideas into products, and projects into practical understanding. An independent technology and product development studio.",
+      "Custom software, business identity, and ongoing IT support for start-ups moving from offline to online.",
     url: "https://adotshelor.com",
-    siteName: "AdotShelor",
+    siteName: "ADOT SHEL OR",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AdotShelor — Technology Crafted for Purpose",
+    title: "ADOT SHEL OR — Take Your Business Online",
     description:
-      "Independent technology and product development studio. Building digital products that endure.",
+      "Software, business identity, and practical IT support for start-ups.",
   },
 };
 
@@ -42,7 +42,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#060D17] text-white selection:bg-[#00D2EE]/30 selection:text-[#38BDF8]">
+      <body className="min-h-full flex flex-col bg-[#0B1020] text-[#F4F6FB] selection:bg-[#3F63E6]/30 selection:text-[#F4F6FB]">
         <a className="skip-link" href="#main">
           Skip to content
         </a>

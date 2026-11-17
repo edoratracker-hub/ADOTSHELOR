@@ -8,7 +8,7 @@ export interface BrandIntroProps {
   readonly isSettled: boolean;
 }
 
-const FULL_WORDMARK = "AdotShelor";
+const FULL_WORDMARK = "ADOT SHEL OR";
 
 export function BrandIntro({ onComplete, isSettled }: BrandIntroProps) {
   const [phase, setPhase] = useState<
@@ -57,7 +57,7 @@ export function BrandIntro({ onComplete, isSettled }: BrandIntroProps) {
     return () => clearTimeout(startTimer);
   }, []);
 
-  // Step 2: Typewriter effect for "AdotShelor"
+  // Step 2: Typewriter effect for "ADOT SHEL OR"
   useEffect(() => {
     if (phase !== "typing") return;
 
@@ -149,7 +149,7 @@ export function BrandIntro({ onComplete, isSettled }: BrandIntroProps) {
       className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-opacity duration-600 ease-out"
       style={{
         opacity: overlayOpacity,
-        backgroundColor: phase === "flying" ? "transparent" : "#060D17",
+        backgroundColor: phase === "flying" ? "transparent" : "#0B1020",
       }}
       aria-hidden="false"
     >
@@ -159,8 +159,8 @@ export function BrandIntro({ onComplete, isSettled }: BrandIntroProps) {
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
           aria-hidden="true"
         >
-          <div className="w-[500px] h-[300px] bg-[#00D2EE]/10 rounded-full blur-3xl" />
-          <div className="w-[350px] h-[220px] bg-[#0284C7]/15 rounded-full blur-3xl -translate-x-10 translate-y-6" />
+          <div className="w-[500px] h-[300px] bg-[#3F63E6]/10 rounded-full blur-3xl" />
+          <div className="w-[350px] h-[220px] bg-[#3F63E6]/15 rounded-full blur-3xl -translate-x-10 translate-y-6" />
         </div>
       )}
 
@@ -172,14 +172,14 @@ export function BrandIntro({ onComplete, isSettled }: BrandIntroProps) {
       >
         <NavyLogo className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 shrink-0" />
         <div className="flex items-baseline">
-          {/* "AdotShelor" characters */}
-          <span className="text-white tracking-tight font-extrabold">
+          {/* "ADOT SHEL OR" characters */}
+          <span className="text-[#F4F6FB] tracking-tight font-extrabold">
             {typedText}
           </span>
 
           {/* Sliding ".com" in electric cyan */}
           <span
-            className="overflow-hidden inline-flex items-baseline transition-all duration-500 ease-out font-bold text-[#00D2EE] text-2xl sm:text-3xl md:text-4xl lg:text-5xl ml-1"
+            className="overflow-hidden inline-flex items-baseline transition-all duration-500 ease-out font-bold text-[#9FB3FF] text-2xl sm:text-3xl md:text-4xl lg:text-5xl ml-1"
             style={{
               maxWidth: showDotCom ? "220px" : "0px",
               opacity: showDotCom ? 1 : 0,
@@ -192,7 +192,7 @@ export function BrandIntro({ onComplete, isSettled }: BrandIntroProps) {
           {/* Blinking Cyan Typing Cursor */}
           {phase === "typing" && (
             <span
-              className="inline-block w-[3px] h-[0.9em] bg-[#00D2EE] ml-1 translate-y-[0.1em] animate-pulse"
+              className="inline-block w-[3px] h-[0.9em] bg-[#3F63E6] ml-1 translate-y-[0.1em] animate-pulse"
               aria-hidden="true"
             />
           )}

@@ -8,7 +8,7 @@
   overflow: hidden;
   padding: clamp(116px, 16vh, 156px) var(--gutter) clamp(48px, 8vh, 80px);
   background:
-    radial-gradient(ellipse at 50% 34%, rgba(0, 210, 238, 0.075), transparent 42%),
+    radial-gradient(ellipse at 50% 34%, rgba(63, 99, 230, 0.075), transparent 42%),
     linear-gradient(165deg, var(--ground) 0%, var(--ground-deep) 75%);
 }
 
@@ -28,8 +28,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(6, 13, 23, 0.22), transparent 28%, rgba(6, 13, 23, 0.32)),
-    radial-gradient(ellipse at 50% 100%, rgba(6, 13, 23, 0.05), var(--ground-deep) 75%);
+    linear-gradient(180deg, rgba(11, 16, 32, 0.22), transparent 28%, rgba(11, 16, 32, 0.32)),
+    radial-gradient(ellipse at 50% 100%, rgba(11, 16, 32, 0.05), var(--ground-deep) 75%);
 }
 
 .hero__inner {
@@ -49,7 +49,7 @@
   justify-content: center;
   gap: 10px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(244, 246, 251, 0.68);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.045em;
@@ -60,7 +60,7 @@
   width: 17px;
   height: 17px;
   flex: none;
-  color: var(--cyan);
+  color: var(--accent-light);
 }
 
 .hero__eyebrow-divider {
@@ -71,23 +71,31 @@
 
 .hero__title {
   margin: 26px 0 0;
-  color: #fff;
+  color: #F4F6FB;
   font-family: var(--font-display);
   font-size: clamp(3rem, 7.4vw, 6.75rem);
   font-weight: 600;
   line-height: 0.99;
   letter-spacing: -0.065em;
   text-wrap: balance;
-  animation: rise 0.9s 0.06s var(--ease-out) both;
 }
 
-.hero__title span {
+.hero__title > .hero__title-line {
   display: block;
   margin-top: 0.08em;
 }
 
+.hero__title > .hero__title-line:first-child {
+  margin-top: 0;
+}
+
+.hero__title .hero__split {
+  display: inline-block;
+  margin: 0;
+}
+
 .hero__title em {
-  color: var(--cyan);
+  color: var(--accent-light);
   font-family: var(--font-italic);
   font-weight: 400;
   letter-spacing: -0.055em;
@@ -96,7 +104,7 @@
 .hero__sub {
   max-width: 660px;
   margin: 26px auto 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(244, 246, 251, 0.72);
   font-size: clamp(1rem, 1.45vw, 1.15rem);
   font-weight: 400;
   line-height: 1.7;
@@ -117,7 +125,7 @@
 .hero__go {
   min-height: 50px;
   padding-right: 7px;
-  box-shadow: 0 12px 34px rgba(0, 210, 238, 0.2);
+  box-shadow: 0 12px 34px rgba(63, 99, 230, 0.2);
 }
 
 .hero__go-dot {
@@ -126,8 +134,8 @@
   height: 36px;
   place-items: center;
   border-radius: 50%;
-  background: rgba(6, 13, 23, 0.9);
-  color: var(--cyan);
+  background: rgba(11, 16, 32, 0.9);
+  color: var(--accent-light);
 }
 
 .hero__go-dot svg {
@@ -141,10 +149,10 @@
   align-items: center;
   justify-content: center;
   padding: 0 22px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(244, 246, 251, 0.16);
   border-radius: 999px;
-  background: rgba(11, 25, 44, 0.48);
-  color: rgba(255, 255, 255, 0.88);
+  background: rgba(21, 29, 49, 0.48);
+  color: rgba(244, 246, 251, 0.88);
   font-size: 14px;
   font-weight: 500;
   backdrop-filter: blur(12px);
@@ -158,9 +166,9 @@
 
 .btn--ghost-cyan:hover {
   transform: translateY(-1px);
-  border-color: rgba(0, 210, 238, 0.45);
-  background: rgba(0, 210, 238, 0.08);
-  color: #fff;
+  border-color: rgba(63, 99, 230, 0.45);
+  background: rgba(63, 99, 230, 0.08);
+  color: #F4F6FB;
 }
 
 .hero__highlights {
@@ -170,7 +178,7 @@
 
 .hero__highlights-label {
   margin: 0 0 18px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(244, 246, 251, 0.45);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -183,8 +191,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(244, 246, 251, 0.12);
+  border-bottom: 1px solid rgba(244, 246, 251, 0.12);
   list-style: none;
 }
 
@@ -196,7 +204,7 @@
 }
 
 .hero__highlight + .hero__highlight {
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(244, 246, 251, 0.12);
 }
 
 .hero__highlight-icon {
@@ -204,13 +212,13 @@
   height: 18px;
   flex: none;
   margin-top: 2px;
-  color: var(--cyan);
+  color: var(--accent-light);
   stroke-width: 1.7;
 }
 
 .hero__highlight-title {
   margin: 0;
-  color: rgba(255, 255, 255, 0.94);
+  color: rgba(244, 246, 251, 0.94);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -218,7 +226,7 @@
 
 .hero__highlight-desc {
   margin: 5px 0 0;
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(244, 246, 251, 0.58);
   font-size: 12px;
   line-height: 1.55;
 }
@@ -260,7 +268,7 @@
   }
 
   .hero__highlight + .hero__highlight {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(244, 246, 251, 0.1);
     border-left: 0;
   }
 }

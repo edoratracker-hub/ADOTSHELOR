@@ -39,7 +39,7 @@ export function AvatarCircles({
             key={name}
             title={name}
             className={cn(
-              "relative flex size-10 items-center justify-center rounded-full text-xs font-semibold text-white ring-2 ring-background",
+              "relative flex size-10 items-center justify-center rounded-full text-xs font-semibold text-[#F4F6FB] ring-2 ring-background",
               tones[i % tones.length]
             )}
           >

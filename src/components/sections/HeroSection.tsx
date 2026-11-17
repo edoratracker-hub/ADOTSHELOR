@@ -1,9 +1,18 @@
 "use client";
 
-import { ArrowRight, Globe } from "@/components/brand/Icons";
-import { BRAND_INFO, HERO_HIGHLIGHTS } from "@/data/portfolioData";
-import { CheckCircle2, Layers, ShieldCheck } from "lucide-react";
+import {
+  BRAND_INFO,
+  HERO_HIGHLIGHTS,
+  WHATSAPP_HREF,
+} from "@/data/portfolioData";
+import {
+  CheckCircle2,
+  Layers,
+  MessageCircle,
+  ShieldCheck,
+} from "lucide-react";
 import { WavyBackground } from "@/components/effects/wavy-background";
+import SplitText from "@/components/SplitText";
 
 const HIGHLIGHT_ICONS = [CheckCircle2, Layers, ShieldCheck] as const;
 
@@ -22,27 +31,54 @@ export function HeroSection() {
 
       <div className="hero__inner">
         <div className="hero__lead">
-          <p className="hero__eyebrow">
-            <Globe className="hero__eyebrow-icon" />
-            <span>AdotShelor</span>
-            <span className="hero__eyebrow-divider" aria-hidden="true" />
-            <span>Technology &amp; Product Development Studio</span>
-          </p>
-
-          <h1 className="hero__title">
-            From problems to
-            <span>
-              powerful <em>solutions.</em>
+          <h1 className="hero__title" aria-label="Your next step is online.">
+            <span className="hero__title-line" aria-hidden="true">
+              <SplitText
+                text="Your next step"
+                tag="span"
+                className="hero__split"
+                delay={35}
+                duration={0.85}
+                effect="blur"
+                trigger="load"
+              />
+            </span>{" "}
+            <span className="hero__title-line" aria-hidden="true">
+              <SplitText
+                text="is"
+                tag="span"
+                className="hero__split"
+                delay={35}
+                duration={0.85}
+                effect="blur"
+                trigger="load"
+              />{" "}
+              <em>
+                <SplitText
+                  text="online."
+                  tag="span"
+                  className="hero__split"
+                  delay={35}
+                  duration={0.85}
+                  effect="blur"
+                  trigger="load"
+                />
+              </em>
             </span>
           </h1>
 
           <p className="hero__sub">{BRAND_INFO.subheadline}</p>
 
           <div className="hero__cta">
-            <a className="btn btn--cyan hero__go" href="#contact">
+            <a
+              className="btn btn--cyan hero__go"
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>{BRAND_INFO.primaryButtonText}</span>
               <span className="hero__go-dot" aria-hidden="true">
-                <ArrowRight />
+                <MessageCircle className="size-4" />
               </span>
             </a>
             <a className="btn btn--ghost-cyan hero__secondary" href="#projects">

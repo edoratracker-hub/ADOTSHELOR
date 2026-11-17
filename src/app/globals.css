@@ -4,38 +4,40 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* AdotShelor Deep Navy Blue Design System Tokens */
+/* AdotShelor Midnight Cobalt design system tokens */
 @theme {
-  --color-ground-deep: #060d17;
-  --color-ground: #0b192c;
-  --color-ground-soft: #14263d;
+  --color-ground-deep: #0B1020;
+  --color-ground: #0B1020;
+  --color-ground-soft: #151D31;
 
-  --color-cyan: #00d2ee;
-  --color-cyan-lit: #38bdf8;
-  --color-cyan-glow: rgba(0, 210, 238, 0.35);
+  --color-accent: #3F63E6;
+  --color-accent-light: #9FB3FF;
+  --color-accent-glow: rgba(63, 99, 230, 0.35);
 
-  --color-amber: #f59e0b;
-  --color-amber-lit: #d97706;
+  --color-ink: #F4F6FB;
+  --color-ink-soft: #A7B1C4;
+  --color-ink-faint: rgba(167, 177, 196, 0.65);
+  --color-ink-ghost: rgba(167, 177, 196, 0.3);
 
-  --color-ink: #ffffff;
-  --color-ink-soft: rgba(255, 255, 255, 0.75);
-  --color-ink-faint: rgba(255, 255, 255, 0.48);
-  --color-ink-ghost: rgba(255, 255, 255, 0.2);
-
-  --color-glass: rgba(11, 25, 44, 0.55);
-  --color-glass-strong: rgba(6, 13, 23, 0.75);
-  --color-hair: rgba(0, 210, 238, 0.16);
-  --color-hair-soft: rgba(255, 255, 255, 0.08);
+  --color-glass: rgba(21, 29, 49, 0.72);
+  --color-glass-strong: rgba(11, 16, 32, 0.86);
+  --color-hair: rgba(42, 54, 80, 0.8);
+  --color-hair-soft: rgba(244, 246, 251, 0.08);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
   --color-border: var(--hair);
   --color-muted: var(--ground-soft);
   --color-muted-foreground: var(--ink-soft);
-  --color-ring: var(--cyan);
+  --color-ring: var(--accent-light);
   --color-popover: var(--ground-deep);
   --color-popover-foreground: var(--foreground);
-  --color-brand: var(--cyan);
+  --color-brand: var(--accent);
+  --color-brand-light: #3454CB;
 
   --font-display: 'Inter Tight', var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', var(--font-geist-sans), system-ui, -apple-system, sans-serif;
@@ -43,27 +45,25 @@
 }
 
 :root {
-  --ground: #0b192c;
-  --ground-deep: #060d17;
-  --ground-soft: #14263d;
-  --ink: #ffffff;
-  --ink-soft: rgba(255, 255, 255, 0.75);
-  --ink-faint: rgba(255, 255, 255, 0.48);
-  --ink-ghost: rgba(255, 255, 255, 0.2);
+  --ground: #0B1020;
+  --ground-deep: #0B1020;
+  --ground-soft: #151D31;
+  --ink: #F4F6FB;
+  --ink-soft: #A7B1C4;
+  --ink-faint: rgba(167, 177, 196, 0.65);
+  --ink-ghost: rgba(167, 177, 196, 0.3);
 
-  --cyan: #00d2ee;
-  --cyan-lit: #38bdf8;
-  --cyan-glow: rgba(0, 210, 238, 0.35);
-  --brand-from: #0284c7;
-  --brand-via: #00d2ee;
-  --brand-to: #38bdf8;
-  --amber: #f59e0b;
+  --accent: #3F63E6;
+  --accent-light: #9FB3FF;
+  --accent-glow: rgba(63, 99, 230, 0.35);
+  --brand-from: #3454CB;
+  --brand-via: #3F63E6;
+  --brand-to: #3F63E6;
 
-  /* Navy glass tint */
-  --glass: rgba(11, 25, 44, 0.55);
-  --glass-strong: rgba(6, 13, 23, 0.78);
-  --hair: rgba(0, 210, 238, 0.18);
-  --hair-soft: rgba(255, 255, 255, 0.08);
+  --glass: rgba(21, 29, 49, 0.72);
+  --glass-strong: rgba(11, 16, 32, 0.86);
+  --hair: rgba(42, 54, 80, 0.8);
+  --hair-soft: rgba(244, 246, 251, 0.08);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --gutter: clamp(18px, 2.6vw, 44px);
@@ -72,9 +72,13 @@
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-italic: 'Instrument Serif', Georgia, serif;
 
-  --background: #060d17;
-  --foreground: #ffffff;
-  --brand: oklch(0.546 0.245 263);
+  --background: #0B1020;
+  --foreground: #F4F6FB;
+  --brand: #3F63E6;
+  --primary: #3F63E6;
+  --primary-foreground: #F4F6FB;
+  --card: #151D31;
+  --card-foreground: #F4F6FB;
 }
 
 html {
@@ -116,7 +120,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--accent-light);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -128,8 +132,8 @@ a {
   z-index: 100;
   padding: 10px 16px;
   border-radius: 999px;
-  background: #fff;
-  color: #060d17;
+  background: #F4F6FB;
+  color: #0B1020;
   font-size: 14px;
   font-weight: 600;
   transition: left 0.2s ease;
@@ -156,46 +160,46 @@ a {
 
 .btn--light {
   padding: 0.72em 1.35em;
-  background: #ffffff;
-  color: #060d17;
+  background: #F4F6FB;
+  color: #0B1020;
   font-weight: 600;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
 }
 .btn--light:hover {
   transform: translateY(-1px);
-  background: #e0f2fe;
-  box-shadow: 0 14px 32px rgba(0, 210, 238, 0.25);
+  background: #9FB3FF;
+  box-shadow: 0 14px 32px rgba(63, 99, 230, 0.25);
 }
 
 .btn--flame,
 .btn--cyan {
   padding: 0.5em 0.5em 0.5em 1.5em;
-  background: linear-gradient(96deg, #0284c7 0%, #00d2ee 100%);
-  color: #060d17;
+  background: linear-gradient(96deg, #3454CB 0%, #3F63E6 100%);
+  color: #F4F6FB;
   font-weight: 700;
-  box-shadow: 0 14px 40px rgba(0, 210, 238, 0.32);
+  box-shadow: 0 14px 40px rgba(63, 99, 230, 0.32);
 }
 .btn--flame:hover,
 .btn--cyan:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 52px rgba(0, 210, 238, 0.48);
+  box-shadow: 0 20px 52px rgba(63, 99, 230, 0.48);
 }
 
 .contact-choice {
   color: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background-color: rgba(8, 15, 24, 0.55);
+  border: 1px solid rgba(244, 246, 251, 0.09);
+  background-color: rgba(21, 29, 49, 0.72);
 }
 .contact-choice[aria-pressed="true"] {
-  border-color: rgba(98, 217, 235, 0.55);
-  background-color: rgba(0, 210, 238, 0.08);
+  border-color: rgba(159, 179, 255, 0.65);
+  background-color: rgba(63, 99, 230, 0.16);
 }
 .contact-choice:hover:not([aria-pressed="true"]) {
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.035);
+  border-color: rgba(244, 246, 251, 0.2);
+  background-color: rgba(244, 246, 251, 0.035);
 }
 .contact-choice:focus-visible {
-  outline: 2px solid #62d9eb;
+  outline: 2px solid #9FB3FF;
   outline-offset: 2px;
 }
 
@@ -261,12 +265,13 @@ a {
   --color-brand: var(--brand);
   --color-brand-from: var(--brand-from);
   --color-brand-via: var(--brand-via);
-  --color-brand-to: var(--brand-to)
+  --color-brand-to: var(--brand-to);
+  --color-brand-light: #3454CB;
 }
 
 .dark {
-  --brand: oklch(0.623 0.214 260);
-  --brand-from: oklch(0.623 0.214 260);
-  --brand-via: oklch(0.707 0.165 255);
-  --brand-to: oklch(0.746 0.16 233);
+  --brand: #3F63E6;
+  --brand-from: #3454CB;
+  --brand-via: #3F63E6;
+  --brand-to: #3F63E6;
 }

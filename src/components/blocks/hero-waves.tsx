@@ -47,7 +47,7 @@ export function HeroWaves() {
           {/* Own line: the slot is sized for the longest word, so centring
               it there keeps short words from leaving a gap mid-sentence. */}
           <span className="block">
-            <FlipWords words={WORDS} className="text-center text-brand" />
+            <FlipWords words={WORDS} className="text-center text-accent-light" />
           </span>
         </h1>
 
@@ -64,7 +64,7 @@ export function HeroWaves() {
             </ShimmerButton>
             <a
               href="#projects"
-              className="inline-flex h-12 items-center rounded-full border border-white/15 bg-background/70 px-7 text-sm font-medium backdrop-blur transition-colors hover:border-cyan/50 hover:bg-cyan/10"
+              className="inline-flex h-12 items-center rounded-full border border-white/15 bg-background/70 px-7 text-sm font-medium backdrop-blur transition-colors hover:border-accent/50 hover:bg-accent/10"
             >
               Browse templates
             </a>
@@ -76,7 +76,7 @@ export function HeroWaves() {
             <AvatarCircles people={SAMPLE_PEOPLE} extra={SAMPLE_EXTRA} />
             <div className="flex flex-col items-center pb-2 text-sm sm:items-start sm:pb-0">
               <div className="flex items-center gap-1.5">
-                <span className="flex text-brand" aria-hidden>
+                <span className="flex text-accent-light" aria-hidden>
                   {Array.from({ length: 5 }, (_, i) => (
                     <StarIcon key={i} className="size-3.5 fill-current" />
                   ))}

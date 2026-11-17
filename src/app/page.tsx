@@ -8,8 +8,8 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { DifferenceSection } from "@/components/sections/DifferenceSection";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 export default function Home() {
   const [isSettled, setIsSettled] = useState<boolean>(false);
@@ -44,7 +44,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#060D17] text-white overflow-x-clip">
+    <div className="min-h-screen flex flex-col bg-[#0B1020] text-[#F4F6FB] overflow-x-clip">
       {/* Brand Intro Animation */}
       <BrandIntro
         key={introKey}
@@ -71,12 +71,11 @@ export default function Home() {
         {/* Our Approach */}
         <ProcessSection />
 
-        {/* Contact */}
-        <ContactSection />
       </main>
 
       {/* 11. Website Footer */}
       <Footer onReplayIntro={handleReplay} />
+      <WhatsAppButton />
     </div>
   );
 }

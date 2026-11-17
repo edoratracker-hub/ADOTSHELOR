@@ -153,14 +153,14 @@ export function CarouselCard({
           className="absolute inset-0 size-full object-cover"
         />
         <span aria-hidden className="absolute inset-0 bg-linear-to-b from-black/75 via-black/20 to-black/20" />
-        <motion.span layoutId={`${id}-category`} className="relative text-sm font-medium text-white/80">
+        <motion.span layoutId={`${id}-category`} className="relative text-sm font-medium text-[#F4F6FB]/80">
           {category}
         </motion.span>
         <Title
           id={inDialog ? `${id}-heading` : undefined}
           layoutId={`${id}-title`}
           className={cn(
-            "relative mt-1.5 max-w-lg font-semibold leading-tight tracking-tight text-balance text-white",
+            "relative mt-1.5 max-w-lg font-semibold leading-tight tracking-tight text-balance text-[#F4F6FB]",
             inDialog ? "text-2xl md:text-4xl" : "text-xl sm:text-2xl"
           )}
         >
@@ -226,7 +226,7 @@ export function CarouselCard({
                   type="button"
                   aria-label="Close"
                   onClick={() => setOpen(false)}
-                  className="absolute top-4 right-4 flex size-9 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur hover:bg-black/65 focus-visible:outline-2 focus-visible:outline-white"
+                  className="absolute top-4 right-4 flex size-9 items-center justify-center rounded-full bg-black/45 text-[#F4F6FB] backdrop-blur hover:bg-black/65 focus-visible:outline-2 focus-visible:outline-white"
                 >
                   <Icon d="M18 6 6 18M6 6l12 12" />
                 </button>

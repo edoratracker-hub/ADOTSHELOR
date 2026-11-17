@@ -1,30 +1,33 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Hero Section & Video Loop Integrity", () => {
-  test("homepage loads and video loop hero element is preserved", async ({ page }) => {
+test.describe("Hero section and calls to action", () => {
+  test("explains the offer and links to the next steps", async ({ page }) => {
+    await page.addInitScript(() => {
+      sessionStorage.setItem("adotshelor_intro_seen", "true");
+    });
     await page.goto("/");
 
-    // Verify main headline is visible
     const headline = page.locator("h1.hero__title");
     await expect(headline).toBeVisible();
-    await expect(headline).toContainText("From Problems to");
+    await expect(headline).toContainText("Your next step is online.");
+    await expect(headline.locator(".split-char").first()).toBeAttached();
+    await expect(page.locator(".hero__eyebrow")).toContainText(
+      "Online growth for start-ups"
+    );
+    await expect(page.locator(".hero__sub")).toContainText(
+      "custom software, a clear business identity, and ongoing IT support"
+    );
 
-    // Verify the video loop hero element
-    const video = page.locator("video.hero__video");
-    await expect(video).toBeAttached();
-
-    // Verify critical video loop attributes to ensure loop hero is intact
-    await expect(video).toHaveAttribute("src", "/hero-loop.mp4");
-    await expect(video).toHaveAttribute("loop", "");
-    await expect(video).toHaveAttribute("autoplay", "");
-    await expect(video).toHaveAttribute("muted", "");
-
-    // Verify primary hero action links
     const ctaPrimary = page.locator("a.hero__go");
-    await expect(ctaPrimary).toHaveAttribute("href", "/contact");
+    await expect(ctaPrimary).toHaveAttribute(
+      "href",
+      /https:\/\/wa\.me\/918138953814\?text=/
+    );
+    await expect(ctaPrimary).toContainText("Chat on WhatsApp");
+    await expect(ctaPrimary).toHaveAttribute("target", "_blank");
 
     const ctaSecondary = page.locator("a.hero__secondary");
-    await expect(ctaSecondary).toHaveAttribute("href", "/projects");
+    await expect(ctaSecondary).toHaveAttribute("href", "#projects");
+    await expect(ctaSecondary).toContainText("See Current Projects");
   });
 });
-
