@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import {
-  ArrowUpRightIcon,
-  FileText,
-  MessageCircle,
-  Shield,
-  X,
-} from "lucide-react";
+import { ArrowUpRightIcon, FileText, Shield, X } from "lucide-react";
 
 import { TextHoverEffect } from "@/components/effects/text-hover-effect";
 import {
@@ -16,7 +10,6 @@ import {
   FOOTER_NAV,
   FOOTER_SERVICES,
   SOCIAL_LINKS,
-  WHATSAPP_HREF,
 } from "@/data/portfolioData";
 
 function subscribeEmpty() {
@@ -42,15 +35,15 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
   const year = useSyncExternalStore(
     subscribeEmpty,
     getClientYear,
-    getServerYear
+    getServerYear,
   );
   const [legalModal, setLegalModal] = useState<"privacy" | "terms" | null>(
-    null
+    null,
   );
   const email = CONTACT_CHANNELS[0];
 
   return (
-    <footer className="relative isolate overflow-hidden border-t border-[var(--hair-soft)] bg-[#0B1020] px-4 pt-16 pb-6 text-[#F4F6FB] sm:px-6 sm:pt-20 sm:pb-8 lg:px-8">
+    <footer className="relative isolate overflow-hidden border-t border-[var(--hair-soft)] bg-[#060d17] px-4 pt-16 pb-6 text-white sm:px-6 sm:pt-20 sm:pb-8 lg:px-8">
       <h2 className="sr-only">Footer</h2>
       <div
         aria-hidden
@@ -63,25 +56,17 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
             <p className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
               {BRAND_INFO.tagline}
             </p>
-            <p className="mt-4 text-pretty text-[#F4F6FB]/70">
+            <p className="mt-4 text-pretty text-white/70">
               {BRAND_INFO.subheadline}
             </p>
-            <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-[rgba(63, 99, 230, 0.28)] bg-[rgba(63, 99, 230, 0.12)] px-3 py-1 text-xs font-medium text-[#9FB3FF]">
-              Brand identity · Custom software · IT support
+            <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-[rgba(0,210,238,0.28)] bg-[rgba(0,210,238,0.12)] px-3 py-1 text-xs font-medium text-[#00d2ee]">
+              <span className="size-2 animate-pulse rounded-full bg-[#00d2ee]" />
+              Active Engineering &amp; Client Advisory
             </p>
-            <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group/idea mt-5 inline-flex items-center gap-1.5 font-medium transition-colors hover:text-[#9FB3FF] ${focusRing}`}
-            >
-              <MessageCircle aria-hidden="true" className="size-4" />
-              Tell Us Your Idea
-            </a>
             {email && (
               <a
                 href={email.href}
-                className={`group/email mt-3 inline-flex items-center gap-1.5 font-medium transition-colors hover:text-[#9FB3FF] ${focusRing}`}
+                className={`group/email mt-5 inline-flex items-center gap-1.5 font-medium transition-colors hover:text-[#00d2ee] ${focusRing}`}
               >
                 {email.value}
                 <ArrowUpRightIcon
@@ -97,7 +82,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
             className="grid grid-cols-2 gap-x-10 gap-y-8 text-sm sm:gap-x-14"
           >
             <div>
-              <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-[#9FB3FF]">
+              <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-[#00d2ee]">
                 Navigation
               </h3>
               <ul className="grid gap-y-3">
@@ -105,7 +90,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className={`text-[#F4F6FB]/70 transition-colors hover:text-[#F4F6FB] ${focusRing}`}
+                      className={`text-white/70 transition-colors hover:text-white ${focusRing}`}
                     >
                       {item.label}
                     </a>
@@ -114,7 +99,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
               </ul>
             </div>
             <div>
-              <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-[#9FB3FF]">
+              <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-[#00d2ee]">
                 Services
               </h3>
               <ul className="grid gap-y-3">
@@ -122,7 +107,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className={`text-[#F4F6FB]/70 transition-colors hover:text-[#F4F6FB] ${focusRing}`}
+                      className={`text-white/70 transition-colors hover:text-white ${focusRing}`}
                     >
                       {item.label}
                     </a>
@@ -133,20 +118,22 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col-reverse gap-6 border-t border-[var(--hair)] pt-6 text-sm text-[#F4F6FB]/60 sm:mt-14 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
+        <div className="mt-12 flex flex-col-reverse gap-6 border-t border-[var(--hair)] pt-6 text-sm text-white/60 sm:mt-14 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <p>© {year} {BRAND_INFO.name}. All rights reserved.</p>
+            <p>
+              © {year} {BRAND_INFO.name}. All rights reserved.
+            </p>
             <button
               type="button"
               onClick={() => setLegalModal("privacy")}
-              className={`transition-colors hover:text-[#F4F6FB] ${focusRing}`}
+              className={`transition-colors hover:text-white ${focusRing}`}
             >
               Privacy Policy
             </button>
             <button
               type="button"
               onClick={() => setLegalModal("terms")}
-              className={`transition-colors hover:text-[#F4F6FB] ${focusRing}`}
+              className={`transition-colors hover:text-white ${focusRing}`}
             >
               Terms of Service
             </button>
@@ -154,7 +141,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
               <button
                 type="button"
                 onClick={onReplayIntro}
-                className={`transition-colors hover:text-[#F4F6FB] ${focusRing}`}
+                className={`transition-colors hover:text-white ${focusRing}`}
               >
                 Replay Intro
               </button>
@@ -169,8 +156,8 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`ADOT SHEL OR on ${social.platform}`}
-                    className="grid size-9 place-items-center rounded-full transition-colors hover:bg-white/10 hover:text-[#F4F6FB] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9FB3FF]"
+                    aria-label={`AdotShelor on ${social.platform}`}
+                    className="grid size-9 place-items-center rounded-full transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00d2ee]"
                   >
                     <span aria-hidden className="text-xs font-semibold">
                       {social.platform === "GitHub"
@@ -188,7 +175,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
       </div>
 
       <TextHoverEffect
-        text={BRAND_INFO.name}
+        text={BRAND_INFO.name.toLowerCase()}
         className="mx-auto mt-8 max-w-7xl font-black tracking-tight sm:mt-12"
       />
 
@@ -198,12 +185,12 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="footer-legal-title"
-            className="relative w-full max-w-xl rounded-3xl border border-[#9FB3FF]/40 bg-[#151D31] p-6 text-[#F4F6FB] shadow-2xl sm:p-8"
+            className="relative w-full max-w-xl rounded-3xl border border-[#00d2ee]/40 bg-[#0b192c] p-6 text-white shadow-2xl sm:p-8"
           >
             <button
               type="button"
               onClick={() => setLegalModal(null)}
-              className="absolute top-5 right-5 rounded-xl p-2 text-[#F4F6FB]/60 transition-colors hover:bg-white/10 hover:text-[#F4F6FB]"
+              className="absolute top-5 right-5 rounded-xl p-2 text-white/60 transition-colors hover:bg-white/10 hover:text-white"
               aria-label="Close dialog"
             >
               <X className="size-5" />
@@ -211,56 +198,63 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
 
             {legalModal === "privacy" ? (
               <div className="space-y-4">
-                <div className="flex items-center gap-2.5 text-[#9FB3FF]">
+                <div className="flex items-center gap-2.5 text-[#00d2ee]">
                   <Shield className="size-5" />
                   <h3 id="footer-legal-title" className="text-lg font-bold">
                     Privacy Policy
                   </h3>
                 </div>
-                <p className="text-xs text-[#F4F6FB]/60">
-                  Last updated: [PLACEHOLDER: policy review date]
+                <p className="text-xs text-white/60">
+                  Last updated: October {year}
                 </p>
-                <div className="max-h-[60vh] space-y-3 overflow-y-auto pr-2 text-sm text-[#F4F6FB]/80">
+                <div className="max-h-[60vh] space-y-3 overflow-y-auto pr-2 text-sm text-white/80">
                   <p>
-                    If you contact us through WhatsApp, your conversation is
-                    handled through that service.
+                    At AdotShelor, we believe in privacy by design. We do not
+                    sell, rent, or trade your personal data.
                   </p>
                   <p>
-                    <strong>Data handling:</strong> [PLACEHOLDER: confirm
-                    whether and how inquiry details are stored or shared.]
+                    <strong>Information We Collect:</strong> When you submit our
+                    contact form, we only receive the information you provide
+                    (name, email, service interests, and message) strictly to
+                    respond to your inquiry.
+                  </p>
+                  <p>
+                    <strong>Confidentiality:</strong> Every project inquiry and
+                    technical discussion is held in strict professional
+                    confidence under non-disclosure obligations.
                   </p>
                   <p>
                     <strong>Contact:</strong> For privacy inquiries, please
-                    email contact@adotshelor.com.
+                    email adotshelor@gmail.com
                   </p>
                 </div>
               </div>
             ) : (
               <div className="space-y-4">
-                <div className="flex items-center gap-2.5 text-[#9FB3FF]">
+                <div className="flex items-center gap-2.5 text-[#00d2ee]">
                   <FileText className="size-5" />
                   <h3 id="footer-legal-title" className="text-lg font-bold">
                     Terms of Service
                   </h3>
                 </div>
-                <p className="text-xs text-[#F4F6FB]/60">
-                  Last updated: [PLACEHOLDER: terms review date]
+                <p className="text-xs text-white/60">
+                  Last updated: October {year}
                 </p>
-                <div className="max-h-[60vh] space-y-3 overflow-y-auto pr-2 text-sm text-[#F4F6FB]/80">
+                <div className="max-h-[60vh] space-y-3 overflow-y-auto pr-2 text-sm text-white/80">
                   <p>
-                    Welcome to ADOT SHEL OR.com. By visiting our website or
+                    Welcome to AdotShelor.com. By visiting our website or
                     engaging with our development studio, you agree to these
                     terms.
                   </p>
                   <p>
-                    <strong>Services:</strong> ADOT SHEL OR helps start-ups
-                    build an online presence, custom software, and ongoing IT
-                    support for their teams.
+                    <strong>Studio Services:</strong> AdotShelor provides custom
+                    software engineering, product development, and guided
+                    technical advisory under mutual client agreements.
                   </p>
                   <p>
-                    <strong>Project terms:</strong> Scope, quote, and timeline
-                    are agreed before work begins. [PLACEHOLDER: confirm
-                    ownership and reuse terms for project work.]
+                    <strong>Intellectual Property:</strong> Clients retain
+                    complete ownership of custom code and deliverables specified
+                    in their respective project contracts.
                   </p>
                   <p>
                     <strong>Contact:</strong> For any contractual questions,

@@ -8,45 +8,39 @@ import {
   SocialLink,
 } from "@/types/portfolio";
 
-export const WHATSAPP_NUMBER = "918138953814";
-export const WHATSAPP_MESSAGE =
-  "Hi ADOT SHEL OR, I'd like to discuss taking my business online.";
-export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  WHATSAPP_MESSAGE,
-)}`;
-
 export const NAVIGATION_ITEMS: readonly NavItem[] = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
   { label: "Our Approach", href: "#approach" },
+  { label: "Projects", href: "#projects" },
+  { label: "About", href: "#about" },
 ];
 
 export const BRAND_INFO = {
-  name: "ADOT SHEL OR",
+  name: "AdotShelor",
   domain: ".com",
-  fullName: "ADOT SHEL OR.com",
-  tagline: "Online growth for start-ups",
-  headline: "Your next step is online.",
+  fullName: "AdotShelor.com",
+  tagline: "Technology & Product Development Studio",
+  headline: "From Problems to Powerful Solutions.",
   subheadline:
-    "We help start-ups move online with custom software, a clear business identity, and ongoing IT support.",
-  primaryButtonText: "Chat on WhatsApp",
-  secondaryButtonText: "See Current Projects",
+    "We design, develop, and deliver digital solutions that solve real problems, turn ideas into working products, and help you understand the technology behind them.",
+  primaryButtonText: "Discuss Your Idea",
+  secondaryButtonText: "Explore Our Work",
 };
 
 export const HERO_HIGHLIGHTS = [
   {
-    title: "Business Identity",
-    description: "A clear brand and online presence for your business.",
+    title: "Practical Solutions",
+    description:
+      "Designed for real-world reliability and day-to-day simplicity.",
   },
   {
-    title: "Custom Software",
-    description: "Useful tools shaped around how your business works.",
+    title: "Transparent Process",
+    description: "Clear milestones, direct collaboration, and no surprises.",
   },
   {
-    title: "Online IT Support",
-    description: "Practical help for your team, explained in plain language.",
+    title: "Long-Term Support",
+    description: "Ongoing guidance and engineering ownership after delivery.",
   },
 ] as const;
 
@@ -54,179 +48,213 @@ export const SERVICE_PILLARS: readonly ServicePillar[] = [
   {
     id: "problem-solving",
     number: "01",
-    title: "Brand identity and online presence",
-    heading: "Give your business a clear online home.",
-    subtitle: "Brand identity & website",
-    tag: "Build your presence",
+    title: "Service One — Problem Solving Through Technology",
+    heading: "Solve the Problem. Simplify the Process.",
+    subtitle: "Solve the Problem. Simplify the Process.",
+    tag: "Problem Solving",
     description:
-      "Help customers understand who you are and what you offer with a clear business identity, website, and digital presence.",
-    whatWeOffer: ["Brand identity", "Business websites", "Digital presence"],
-    buttonText: "Discuss Your Online Presence",
-    buttonHref: WHATSAPP_HREF,
+      "We identify practical challenges and develop digital solutions that improve workflows, reduce repetitive work, and make everyday tasks easier.",
+    whatWeOffer: [
+      "Custom websites and web applications",
+      "Workflow automation",
+      "Business management systems",
+      "Custom software tools",
+    ],
+    buttonText: "Explore Problem Solving",
+    buttonHref: "#contact",
+    technicalFocus: [
+      "Custom Web Apps",
+      "Workflow Automation",
+      "Business Systems",
+      "Custom Software Tools",
+    ],
   },
   {
     id: "idea-to-product",
     number: "02",
-    title: "Custom software",
-    heading: "Build around how your business works.",
-    subtitle: "Software for your business",
-    tag: "Build what you need",
+    title: "Service Two — Idea-to-Product Development",
+    heading: "Your Idea, Built Into Reality.",
+    subtitle: "Your Idea, Built Into Reality.",
+    tag: "Idea-to-Product",
     description:
-      "Move key tasks online with custom software shaped around your business, your customers, and the way your team works.",
+      "Have an idea for a digital product? We help transform your concept into a working application through thoughtful planning, design, development, and testing.",
     whatWeOffer: [
-      "Web apps and dashboards",
-      "Ordering systems",
-      "Business platforms",
+      "Website and application development",
+      "MVP and prototype development",
+      "Database and API integration",
+      "Product interface design",
     ],
-    buttonText: "Discuss Custom Software",
-    buttonHref: WHATSAPP_HREF,
+    buttonText: "Build Your Idea",
+    buttonHref: "#contact",
+    technicalFocus: [
+      "MVP & Prototypes",
+      "Full-Stack Web Apps",
+      "Database & APIs",
+      "Product UI/UX Design",
+    ],
   },
   {
-    id: "ongoing-support",
+    id: "guided-development",
     number: "03",
-    title: "Ongoing IT support",
-    heading: "Get support that makes sense.",
-    subtitle: "Support for your team",
-    tag: "Help after launch",
+    title: "Service Three — Guided Project Development",
+    heading: "Build It. Understand It.",
+    subtitle: "Build It. Understand It.",
+    tag: "Guided Development",
     description:
-      "Get online help through chat, calls, and screen-sharing. Speak directly with the people who built your software, and get technical issues explained in plain language.",
+      "We develop projects while explaining the technologies, implementation choices, and working principles behind them, helping clients gain practical technical understanding.",
     whatWeOffer: [
-      "Support for your internal team",
-      "Help by chat, call, or screen-sharing",
-      "Plain-language explanations",
-    ],
-    buttonText: "Ask About IT Support",
-    buttonHref: WHATSAPP_HREF,
-  },
-  {
-    id: "student-project-guidance",
-    number: "04",
-    title: "Student and portfolio projects",
-    heading: "Build a project you can explain.",
-    subtitle: "Guidance for students",
-    tag: "Learn by building",
-    description:
-      "Get guidance with a college or portfolio project. Work through the build step by step, with code walkthroughs and clear explanations.",
-    whatWeOffer: [
-      "Project planning",
-      "Guided development",
+      "Guided software project development",
       "Code walkthroughs",
-      "Technical explanations",
+      "Technical documentation",
+      "Implementation explanations",
+      "Project demonstrations",
     ],
-    buttonText: "Discuss a Student Project",
-    buttonHref: WHATSAPP_HREF,
+    buttonText: "Explore Guided Development",
+    buttonHref: "#contact",
+    technicalFocus: [
+      "Guided Engineering",
+      "Code Walkthroughs",
+      "System Documentation",
+      "Live Technical Demos",
+    ],
   },
 ];
 
 export const WORK_STAGES: readonly WorkStage[] = [
   {
     step: "01",
-    title: "Discover",
-    description:
-      "Tell us about your business, the people you serve, and the problem you want to solve.",
-    timeline: "Understand your needs",
+    title: "Understand",
+    description: "We discuss your goals, challenges, and requirements.",
+    timeline: "Stage 01",
   },
   {
     step: "02",
-    title: "Plan",
+    title: "Plan & Design",
     description:
-      "We agree on the scope, a clear quote, and a timeline before work starts.",
-    timeline: "Agree on the plan",
+      "We define the project scope, choose suitable technologies, and create a clear development plan.",
+    timeline: "Stage 02",
   },
   {
     step: "03",
-    title: "Build",
+    title: "Develop & Collaborate",
     description:
-      "We work in short cycles and share progress, so you can stay involved as the work takes shape.",
-    timeline: "Build in steps",
+      "We build the solution, test its functionality, and share progress throughout development.",
+    timeline: "Stage 03",
   },
   {
     step: "04",
-    title: "Review",
+    title: "Deliver & Explain",
     description:
-      "You review working updates and tell us what fits your business and what needs attention.",
-    timeline: "Review together",
-  },
-  {
-    step: "05",
-    title: "Improve",
-    description:
-      "Changes are welcome. We agree priorities for each cycle and improve the work together.",
-    timeline: "Adjust priorities",
-  },
-  {
-    step: "06",
-    title: "Launch & Support",
-    description:
-      "We prepare the agreed work for launch and support your team online after it goes live.",
-    timeline: "Launch and support",
+      "We deliver the completed work, explain its functionality, and provide the agreed documentation and support.",
+    timeline: "Stage 04",
   },
 ];
 
 export const PROJECTS_DATA: readonly ProjectItem[] = [
   {
-    id: "supermarket-ordering-app",
-    name: "Supermarket Ordering App",
-    category: "Ordering system",
-    description:
-      "A mobile ordering app for supermarket customers and store teams.",
-    features: [
-      "Customer login",
-      "Store and product listings",
-      "Cart and checkout",
-      "Order tracking",
-      "Admin management",
+    id: "business-management-platform",
+    name: "Business Management Platform",
+    title: "Business Management Platform",
+    category: "Business Software",
+    problem:
+      "Fragmented operations, scattered spreadsheets, and inefficient manual administrative overhead slowed team execution.",
+    solution:
+      "Engineered an integrated business management platform centralizing operations, client records, invoicing, and real-time operational reporting.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Prisma",
     ],
-    status: "In Development",
+    status: "Active",
+    screenshot: "/projects/business-platform.jpg",
+    liveDemo: "https://adotshelor.com",
+    githubRepo: "https://github.com/adotshelor",
+    metrics: "Production Active • Real-Time Client Telemetry",
   },
   {
-    id: "water-connect",
-    name: "Water Connect",
-    category: "Marketplace platform",
-    description: "A marketplace platform for water suppliers.",
+    id: "workflow-automation-platform",
+    name: "Workflow Automation Platform",
+    title: "Workflow Automation Platform",
+    category: "Workflow Systems",
+    problem:
+      "Repetitive data entry and disconnected multi-step communication between departments caused recurring errors and delay.",
+    solution:
+      "Developed an automated pipeline engine that synchronizes event-driven triggers, formats payloads, and eliminates redundant manual steps.",
+    technologies: ["React", "Node.js", "REST APIs", "Redis", "Docker"],
+    status: "Active",
+    screenshot: "/projects/workflow-automation.jpg",
+    liveDemo: "https://adotshelor.com",
+    githubRepo: "https://github.com/adotshelor",
+    metrics: "Event-Driven • Zero Payload Loss • Sub-20ms",
+  },
+  {
+    id: "ai-analytics-tool",
+    name: "AI-Powered Analytics Tool",
+    title: "AI-Powered Analytics Tool",
+    category: "AI Integration",
+    problem:
+      "Complex data streams and unstructured performance logs were too dense to interpret quickly without specialized analysts.",
+    solution:
+      "Created an intuitive analytics interface integrating AI assistance for automated trend summaries, anomaly detection, and actionable insights.",
+    technologies: [
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "OpenAI / Claude API",
+      "Chart.js",
+    ],
     status: "In Development",
+    isPrototype: true,
+    screenshot: "/projects/ai-analytics.jpg",
+    githubRepo: "https://github.com/adotshelor",
+    metrics: "In Development Prototype • Predictive Modeling",
   },
 ];
 
 export const DIFFERENCE_ITEMS: readonly DifferenceItem[] = [
   {
-    title: "Start with your business",
-    description:
-      "We learn how your business works before recommending a digital solution.",
+    title: "Solutions With Purpose",
+    description: "Every project begins with understanding the actual problem.",
     icon: "Target",
   },
   {
-    title: "Keep things clear",
+    title: "Clear Communication",
     description:
-      "We explain choices, progress, and technical issues in plain language.",
+      "We explain project scope, technical decisions, and development progress.",
     icon: "MessageSquare",
   },
   {
-    title: "Build together",
-    description:
-      "You see progress, share feedback, and help set priorities as we work.",
+    title: "Practical Development",
+    description: "We focus on functionality, usability, and maintainable code.",
     icon: "Cpu",
   },
   {
-    title: "Stay connected",
+    title: "Technical Understanding",
     description:
-      "Your team can get online support from the people who know the software.",
+      "We help clients understand what has been built and how it works.",
     icon: "Lightbulb",
   },
 ];
 
 export const CONTACT_CHANNELS: readonly ContactChannel[] = [
   {
-    label: "Email",
-    value: "contact@adotshelor.com",
-    href: "mailto:contact@adotshelor.com",
+    label: "Official Email",
+    value: "adotshelor@gmail.com",
+    href: "mailto:adotshelor@gmail.com",
   },
 ];
+
+export const WHATSAPP_CONTACT = {
+  phoneNumber: "918138953814",
+  prefilledMessage: "Hi, I'd like to know more about AdotShelor's services.",
+} as const;
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
   {
     platform: "GitHub",
-    url: "https://github.com/adotshelor",
+    url: "https://github.com/adotshelor-cloud",
     isConfigured: true,
   },
   {
@@ -242,18 +270,15 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
 ];
 
 export const FOOTER_SERVICES = [
-  { label: "Brand & Online Presence", href: "#problem-solving" },
-  { label: "Custom Software", href: "#idea-to-product" },
-  { label: "Ongoing IT Support", href: "#ongoing-support" },
-  { label: "Student & Portfolio Projects", href: "#student-project-guidance" },
+  { label: "Problem Solving", href: "/services#problem-solving" },
+  { label: "Idea-to-Product", href: "/services#idea-to-product" },
+  { label: "Guided Development", href: "/services#guided-development" },
 ];
 
 export const FOOTER_NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Student & Portfolio Projects", href: "#student-project-guidance" },
-  { label: "Our Approach", href: "#approach" },
-  { label: "Contact", href: WHATSAPP_HREF },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Our Approach", href: "/approach" },
 ];

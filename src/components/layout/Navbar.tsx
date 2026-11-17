@@ -13,7 +13,14 @@ export function Navbar({ isSettled = true }: NavbarProps) {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
-    const sectionIds = ["home", "about", "services", "projects", "approach"];
+    const sectionIds = [
+      "home",
+      "services",
+      "approach",
+      "projects",
+      "about",
+      "contact",
+    ];
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 180;
@@ -46,7 +53,7 @@ export function Navbar({ isSettled = true }: NavbarProps) {
       label="Primary"
       logo={
         <div id="navbar-logo-target">
-          <Logo size="md" href="#home" textId="navbar-logo-text" iconOnly />
+          <Logo size="md" href="#home" textId="navbar-logo-text" />
         </div>
       }
       className={`!fixed !inset-x-0 !top-0 z-40 w-full transition-opacity duration-500 ${
