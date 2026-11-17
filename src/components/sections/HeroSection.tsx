@@ -5,12 +5,7 @@ import {
   HERO_HIGHLIGHTS,
   WHATSAPP_HREF,
 } from "@/data/portfolioData";
-import {
-  CheckCircle2,
-  Layers,
-  MessageCircle,
-  ShieldCheck,
-} from "lucide-react";
+import { CheckCircle2, Layers, MessageCircle, ShieldCheck } from "lucide-react";
 import { WavyBackground } from "@/components/effects/wavy-background";
 import SplitText from "@/components/SplitText";
 
@@ -77,9 +72,6 @@ export function HeroSection() {
               rel="noopener noreferrer"
             >
               <span>{BRAND_INFO.primaryButtonText}</span>
-              <span className="hero__go-dot" aria-hidden="true">
-                <MessageCircle className="size-4" />
-              </span>
             </a>
             <a className="btn btn--ghost-cyan hero__secondary" href="#projects">
               {BRAND_INFO.secondaryButtonText}

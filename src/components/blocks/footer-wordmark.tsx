@@ -42,10 +42,10 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
   const year = useSyncExternalStore(
     subscribeEmpty,
     getClientYear,
-    getServerYear
+    getServerYear,
   );
   const [legalModal, setLegalModal] = useState<"privacy" | "terms" | null>(
-    null
+    null,
   );
   const email = CONTACT_CHANNELS[0];
 
@@ -69,15 +69,7 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
             <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-[rgba(63, 99, 230, 0.28)] bg-[rgba(63, 99, 230, 0.12)] px-3 py-1 text-xs font-medium text-[#9FB3FF]">
               Brand identity · Custom software · IT support
             </p>
-            <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group/idea mt-5 inline-flex items-center gap-1.5 font-medium transition-colors hover:text-[#9FB3FF] ${focusRing}`}
-            >
-              <MessageCircle aria-hidden="true" className="size-4" />
-              Tell Us Your Idea
-            </a>
+
             {email && (
               <a
                 href={email.href}
@@ -135,7 +127,9 @@ export function FooterWordmark({ onReplayIntro }: FooterWordmarkProps) {
 
         <div className="mt-12 flex flex-col-reverse gap-6 border-t border-[var(--hair)] pt-6 text-sm text-[#F4F6FB]/60 sm:mt-14 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <p>© {year} {BRAND_INFO.name}. All rights reserved.</p>
+            <p>
+              © {year} {BRAND_INFO.name}. All rights reserved.
+            </p>
             <button
               type="button"
               onClick={() => setLegalModal("privacy")}

@@ -26,12 +26,12 @@ export const NAVIGATION_ITEMS: readonly NavItem[] = [
 export const BRAND_INFO = {
   name: "ADOT SHEL OR",
   domain: ".com",
-  fullName: "ADOT SHEL OR.com",
+  fullName: "ADOT SHEL OR",
   tagline: "Online growth for start-ups",
   headline: "Your next step is online.",
   subheadline:
     "We help start-ups move online with custom software, a clear business identity, and ongoing IT support.",
-  primaryButtonText: "Chat on WhatsApp",
+  primaryButtonText: "Contact Us",
   secondaryButtonText: "See Current Projects",
 };
 
